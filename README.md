@@ -3,4 +3,5 @@
  - Svelte
  - TypeScript
  - TailwindCSS
+ - Sass
  - Routify
