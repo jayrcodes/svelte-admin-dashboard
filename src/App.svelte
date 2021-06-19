@@ -1,6 +1,12 @@
 <script lang="ts">
   import { Router } from '@roxi/routify';
   import { routes } from '../.routify/routes';
+
+  import to from 'await-to-js';
+  import _ from 'lodash';
+
+  window.$async = to;
+  window._ = _;
 </script>
 
 <Router {routes} />
