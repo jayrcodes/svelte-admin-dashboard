@@ -44,9 +44,8 @@
       <CustomDropdown />
     </nav>
     <div
-      class="content 
-      {showSidebar ? '' : 'content--stretch'} 
-      p-4"
+      class="content p-4 
+      {showSidebar ? '' : 'content--stretch'}"
     >
       <slot />
     </div>
@@ -57,7 +56,6 @@
   $top-nav-height: 56px;
   $sidebar-width: 300px;
   $transition-duration: 0.3s;
-  $primary: #3498db;
 
   .sidebar {
     position: fixed;
@@ -72,7 +70,7 @@
     }
 
     &-item.active {
-      background: $primary;
+      background: var(--color-primary);
       color: #fff;
     }
   }

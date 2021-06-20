@@ -8,21 +8,18 @@
 
   function handleSort(column) {
     sortColumn = column;
+    sortDirection = getSortDirection(sortDirection);
+  }
 
-    if (sortDirection === null) {
-      sortDirection = 'asc';
-      return;
-    }
-
-    let direction = {
-      asc: 'desc',
-      desc: null,
-    };
-
-    sortDirection = direction[sortDirection];
-
-    if (sortDirection === null) {
-      sortColumn = null;
+  function getSortDirection(direction) {
+    switch (direction) {
+      case 'asc':
+        return 'desc';
+      case 'desc':
+        sortColumn = null;
+        return null;
+      default:
+        return 'asc';
     }
   }
 </script>

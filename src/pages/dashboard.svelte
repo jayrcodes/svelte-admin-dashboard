@@ -1,9 +1,9 @@
 <script lang="ts">
-  import type { Post } from '../models/Post';
   import api from '../services/api';
-  import CustomSidebar from '../components/CustomSidebar.svelte';
   import { onMount } from 'svelte';
   import CustomTable from '../components/CustomTable.svelte';
+  import CustomSidebar from '../components/CustomSidebar.svelte';
+  import type { Post } from '../models/Post';
 
   let posts: Post[] = [];
   let loading = false;
@@ -24,7 +24,7 @@
 </script>
 
 <CustomSidebar>
-  <p class="text-xl mb-4">Dashboard</p>
+  <p class="text-xl mb-4 text-primary">Dashboard</p>
 
   {#if loading}
     <h1>loading...</h1>

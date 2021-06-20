@@ -14,6 +14,11 @@
 <Router {routes} />
 
 <style global lang="postcss">
+  :global(:root) {
+    --color-primary: #3498db;
+    --color-secondary: #ecc94b;
+  }
+
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
