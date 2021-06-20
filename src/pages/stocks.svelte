@@ -3,13 +3,9 @@
   import api from '../services/api';
   import CustomSidebar from '../components/CustomSidebar.svelte';
   import { onMount } from 'svelte';
-  import CustomTable from '../components/CustomTable.svelte';
 
   let posts: Post[] = [];
   let loading = false;
-  let columns = ['id', 'title', 'body'];
-  let sortColumn = null;
-  let sortDirection = null;
 
   async function getList() {
     loading = true;
@@ -24,14 +20,19 @@
 </script>
 
 <CustomSidebar>
-  <p class="text-xl mb-4">Dashboard</p>
+  <p class="text-xl mb-4">Stocks</p>
 
   {#if loading}
     <h1>loading...</h1>
-  {:else}
-    <CustomTable items={posts} {columns} {sortColumn} {sortDirection} />
   {/if}
+
+  {#each posts as post}
+    <div class="bg-white shadow-xl rounded p-4 mb-4">
+      <h1>{post.title}</h1>
+      <pre>{post.body}</pre>
+    </div>
+  {/each}
 </CustomSidebar>
 
-<style lang="scss">
+<style>
 </style>

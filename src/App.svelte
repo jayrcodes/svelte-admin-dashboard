@@ -4,9 +4,11 @@
 
   import to from 'await-to-js';
   import _ from 'lodash';
+  import Case from 'case';
 
   window.$async = to;
   window._ = _;
+  window.$case = Case;
 </script>
 
 <Router {routes} />
