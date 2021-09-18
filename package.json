@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^11.0.0",
     "@rollup/plugin-typescript": "^8.0.0",
     "@roxi/routify": "^2.18.0",
@@ -35,7 +36,7 @@
   },
   "dependencies": {
     "await-to-js": "^3.0.0",
-    "axios": "^0.21.1",
+    "axios": "^0.21.4",
     "case": "^1.6.3",
     "lodash": "^4.17.21",
     "sirv-cli": "^1.0.0"
